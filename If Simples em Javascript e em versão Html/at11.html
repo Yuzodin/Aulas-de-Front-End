@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="free-global-2130831-1794976.webp" type="image/x-icon">
+    <title>Dectector de nacionalidade</title>
+    <style>
+        h1{
+            color: darkolivegreen;
+            background-color: gold;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dectector de nacionalidade</h1>
+    <p>Em qual país você mora?:<input type="text" name="texnas" id="texnas">
+    <input type="button" value="Verificar" onclick="verificar()"></p>
+    <div id="ver"></div>
+    <script>
+        function verificar(){
+            var texnc = document.getElementById('texnas')
+            var ver = document.getElementById('ver')
+            var nas = String(texnc.value)
+            if (nas != 'Brasil'){
+            ver.innerHTML = (`Você que mora em ${nas} é um(a) estrangeiro(a).`)
+            }
+            else{
+                ver.innerHTML = (`Você que mora em ${nas} é um(a) Brasileiro(a).`)
+            }
+        }
+    </script>
+</body>
+</html>

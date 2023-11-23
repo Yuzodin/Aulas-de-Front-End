@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="speedometer-icon-512x512-0stjdmr0.png" type="image/x-icon">
+    <title>Velocimetro</title>
+    <style>
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: darkgray;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        res.innerHtml{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }  
+    </style>
+</head>
+<body>
+    <h1>Sistema de velocidade:</h1>
+    <p>velocidade registrada do veiculo: <input type="number" name="veltn1" id="veltn1"> Km/h 
+    <input type="button" value="Radar" onclick="calcular()">
+    <div id="res"></div></p>
+    <script>
+        function calcular(){
+            var txvl = document.getElementById('veltn1')
+            var res = document.getElementById('res')
+            var vel = Number(txvl.value)
+            res.innerHTML = (`Sua velocidade registrada foi de <strong>${vel} Km/h</strong>`)
+            if (vel > 60){
+                res.innerHTML += (`<p>Você está acima do limite de velocidade.<strong>Você acaba de ser Multado!</strong></p>`)
+            }
+            res.innerHTML += (`<p>Dirija sempre com sinto de segurança. Tenha um bom dia!</p>`)
+        }
+    </script> 
+</body>
+</html>
