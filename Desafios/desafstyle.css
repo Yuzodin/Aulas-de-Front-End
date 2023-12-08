@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(26, 25, 25);
+    color: cornflowerblue;
+}
+header{
+    text-align: center;
+    margin-top: 3%;
+    font-family: initial;
+    font-size: xx-large;
+}
+footer{
+    text-align: center;
+    margin-top: 20%;
+}
+.videcenter{
+    text-align: center;
+    margin-top: 5%;
+    display: flexbox;
+    flex-direction: column;
+}h1{
+    text-align: center;
+    margin-top: 3%;
+    font-family: initial;
+    font-size: x-large;
+}
+.ce{
+    text-align: center;
+    margin-top: 4%;
+}
+div{
+    text-align: center;
+    margin-top: 6%;
+}
