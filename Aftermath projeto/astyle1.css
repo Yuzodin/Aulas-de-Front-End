@@ -1,0 +1,25 @@
+main{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0D0D0D;
+}
+body{
+    background-image:linear-gradient(to bottom,#D9D9D9,#404040);
+}
+div{
+    color: #0D0D0D;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 700px;
+    padding: 5%;
+    margin: auto;
+    max-width: max-content;
+    border-radius: 5%;
+    box-shadow: 3px 3px 13px black;
+}
+footer{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
