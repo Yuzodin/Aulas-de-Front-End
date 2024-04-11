@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas Desafio 1</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            text-align: center;
+            width: 300px;
+            height: 200px;
+        }
+        td{
+            border: 1px solid black;
+        }
+        td:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        td#especial:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas desafio 1 estilo teclado</h1><br>
+    <table>
+       <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+       </tr>
+       <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+       </tr>
+       <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+       </tr>
+       <tr>
+            <td colspan="2">0</td>
+            <td id="especial">del</td>
+       </tr>
+    </table>
+</body>
+</html>
