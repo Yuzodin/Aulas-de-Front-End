@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste User</title>
+</head>
+<body>
+    <h1>Teste de usuario</h1>
+    <form action="cadastro.js" method="post" autocomplete="on">
+       <label for="inome">Nome:
+        <p><input type="text" name="Nome" id="inome" autocomplete="username" required placeholder="Nome do aluno"></p>
+       </label>
+       <label for="isobrenome">
+        <p><input type="text" name="sobrenome" id="isobrenome" autocomplete="nickname" required placeholder="Nome do sobrenome"></p>
+       </label>
+       <label for="inota">
+        <p><input type="number" name="numero" id="inota" autocomplete="cc-number" placeholder="Nota do Aluno(a)" required step="0.1"></p>
+       </label>
+       <label for="imes">
+        <p><input type="month" name="mes" id="imes" value="2024-05" required></p>
+       </label>
+       <label for="idate">
+        <p><input type="date" name="data" id="idate" required></p>
+       </label>
+       <label for="itime">
+        <p><input type="time" name="relogio" id="itime"></p>
+       </label>
+       <input type="submit" value="Enviar">
+       <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
