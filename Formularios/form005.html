@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form005</title>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>
+    <form action="cadastro.js" method="post">
+        <fieldset>
+            <legend>Sexo</legend>
+            <p><label for="isexoM"><input type="radio" name="sexo" id="isexoM" value="M"></label>Masculino
+             <label for="isexoF"><input type="radio" name="sexo" id="isexoF" value="F"></label>Feminino</p>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <p><label for="ifut"><input type="checkbox" name="futebol" id="ifut"></label>Futebol
+                <label for="ibask"><input type="checkbox" name="basquete" id="ibask"></label>Basquete
+                <label for="iarte"><input type="checkbox" name="Artes Marciais" id="iarte"></label>Artes Marciais
+                <label for="inata"><input type="checkbox" name="natação" id="inata"></label>Natação
+                <label for="itenis"><input type="checkbox" name="tenis" id="itenis"></label>Tenis
+                <label for="iatle"><input type="checkbox" name="Atletismo" id="iatle"></label>Atletismo
+                <label for="iskate"><input type="checkbox" name="Skate" id="iskate"></label>Skate
+                <label for="ivolei"><input type="checkbox" name="volei" id="ivolei"></label>Vôlei</p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
