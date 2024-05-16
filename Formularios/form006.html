@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form.script</title>
+</head>
+<style>
+    input#iano{
+        width: 250px;
+    }
+</style>
+<body>
+    <h1>Form com JavaScript</h1>
+    <form action="cadastro.js" method="get">
+        <p><label for="iano">
+            <input type="number" name="ano" id="iano" oninput="calcnas()" placeholder="Digite seu ano de nascimento" required
+            min="1900", max="2024">
+        </label></p>
+        <p>
+            <label for="inas">Sua idade é de:
+                <output id="inas"></output>
+            </label>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+        <script>
+            function calcnas(){
+                let year = new Date().getFullYear();
+                inas.innerHTML = Number(year) - Number(iano.value)
+
+            }
+            
+        </script>
+</body>
+</html>
