@@ -1,0 +1,32 @@
+/*Estilos para telas*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    background-color: lightslategray;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+menu ul{
+    background-color: lightslategray;
+    text-align: center;
+}
+menu li{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(135, 142, 149);
+}
+menu li:hover{
+    color: white;
+}
+main{
+    width: 500px;
+    text-align: justify;
+    display: block;
+    margin: auto;
+}

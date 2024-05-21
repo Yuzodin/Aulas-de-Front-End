@@ -1,0 +1,15 @@
+/*Esilos para impressoras*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+menu{
+    display: none;
+}
+article::after{
+    content: 'Este texto foi impresso pelo site: www.http://127.0.0.1:5500/MQ01/index.html';
+}
