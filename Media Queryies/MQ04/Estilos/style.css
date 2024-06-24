@@ -1,0 +1,54 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: whitesmoke;
+}
+header{
+    background-color: dimgray;
+}
+header > h1{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+img#burguer{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+menu{
+    display: none;
+}
+menu > ul{
+    list-style-type: none;
+}
+menu  a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: gray;
+    border-top: 1px solid dimgray;
+}
+menu a:hover{
+    background-color: gainsboro;
+    color: dimgray;
+}
+
+main{
+    width: 90vw;
+    display: block;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+    text-align: justify;
+    text-indent: 20px;
+    padding: 10px;
+}
