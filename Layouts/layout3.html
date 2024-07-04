@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3px;
+            flex: 1 1 100vw; 
+            color: black;                       
+        }
+        header, nav, main, aside, footer{
+            background-color: gray;
+            display: flex;
+            margin: 3px;
+        }
+        header{
+            flex: 1 1 100vw;
+            height: 100px;                      
+        }
+        #logo{
+            flex: 0 1 200px;
+            background-color: lightgray; 
+        }
+        #openMenu, #closeMenu{
+            border: none;
+            background: none;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 0px 5px;
+            cursor: pointer;
+            display: none;
+        }
+        nav{
+            flex: 20 1 100vw;
+            align-items: center;
+            justify-content: flex-end;                         
+        }
+        nav a{
+            margin: 3%;
+            /*Para mobile também adicione o menu hambuguer pois ele está quebrando na versão mobile*/
+            font-size: 20pt;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        main{
+            margin: 3px;
+            flex: 1 1 500px;
+             height: calc(100vh - 224px);
+        }
+        aside{
+            flex: 1 1 200px;
+                                   
+        }
+        footer{
+            flex: 1 1 100vw;
+            height: 100px;                  
+        }
+        @media only screen and (max-width: 923px){
+            main{
+                height: calc(100vh - 436px);
+            }
+            aside{
+                flex: 1 1 100vw;
+                height: 100px;
+            }
+        }
+        @media only screen and (max-width: 717px){
+            #openMenu, #closeMenu{
+                display: block;
+            }
+            #openMenu{
+                margin-left: auto;
+            }
+            #closeMenu{
+                position: fixed;
+                right: 15px;
+                top: 15px;
+            }
+            nav{
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.8);
+                justify-content: center;
+                margin: 0px;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><a href="#" id="logo">LOGO</a>
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav id="Menu">
+            <button id="closeMenu">X</button>
+            <a href="#">Inicio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Serviços</a>
+            <a href="#">Sobre</a>        
+            <a href="#">Contatos</a>        
+        </nav>
+    </header>
+    
+    <main>Principal do site</main>
+    <aside>Realcionado</aside>
+    <footer>Rodapé</footer>
+
+    <script>
+        openMenu.addEventListener('click', ()=> {
+            Menu.style.display = 'flex'
+            Menu.style.right = (Menu.offsetWidth * -1) + 'px'
+
+            openMenu.style.display = 'none'
+
+            setTimeout(() => {
+                Menu.style.opacity = '1'
+                Menu.style.right = '0'
+            },10)
+
+        })
+        closeMenu.addEventListener('click', ()=>{
+            Menu.removeAttribute('style')
+            openMenu.removeAttribute('style')
+            Menu.style.right = (Menu.offsetWidth * -1) + 'px'
+            setTimeout(() => {
+                Menu.style.opacity = '0'
+            },200)
+
+        });
+    </script>
+
+</body>
+</html>
