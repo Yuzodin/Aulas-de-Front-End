@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3px;
+            flex: 1 1 100vw; 
+            color: black;                       
+        }
+        header, nav, main, aside, section, footer{
+            background-color: gray;
+            display: flex;
+            margin: 3px;
+        }
+        header{
+            flex: 1 1 100vw;
+            height: 100px;                      
+        }
+        #logo{
+            flex: 0 1 200px;
+            background-color: lightgray; 
+        }
+        #openMenu, #closeMenu{
+            border: none;
+            background: none;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 0px 5px;
+            cursor: pointer;
+            display: none;
+        }
+        nav{
+            flex: 20 1 100vw;
+            align-items: center;
+            justify-content: flex-end;                         
+        }
+        nav a{
+            margin: 3%;
+            /*Para mobile também adicione o menu hambuguer pois ele está quebrando na versão mobile*/
+            font-size: 20pt;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        section{
+            flex: 20 1 100vw;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 300%;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%; /* Adicionado para arredondar as setas */
+            padding: 10px; /* Adicionado para deixar as setas mais visíveis */
+        }
+        .arrow-left {
+            left: 10px;
+        }
+        .arrow-right {
+            right: 10px;
+        }
+        main{
+            margin: 3px;
+            flex: 1 1 500px;
+            height: calc(100vh - 224px);
+        }
+        aside{
+            flex: 1 1 200px;
+                                   
+        }
+        footer{
+            flex: 1 1 100vw;
+            height: 100px;                  
+        }
+        @media only screen and (max-width: 923px){
+            main{
+                height: calc(100vh - 436px);
+            }
+            aside{
+                flex: 1 1 100vw;
+                height: 100px;
+            }
+        }
+        @media only screen and (max-width: 717px){
+            #openMenu, #closeMenu{
+                display: block;
+            }
+            #openMenu{
+                margin-left: auto;
+            }
+            #closeMenu{
+                position: fixed;
+                right: 15px;
+                top: 15px;
+            }
+            nav{
+                position: fixed;
+                flex-direction: column;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(255, 255, 255, 0.8);
+                justify-content: center;
+                margin: 0px;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><a href="#" id="logo">LOGO</a>
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav id="Menu">
+            <button id="closeMenu">X</button>
+            <a href="#">Inicio</a>
+            <a href="#">Produtos</a>
+            <a href="#">Serviços</a>
+            <a href="#">Sobre</a>        
+            <a href="#">Contatos</a>        
+        </nav>
+    </header>
+    <section>
+        <button class="arrow arrow-left">&#10094;</button>
+        <div class="slide-container">
+            <div class="slide">Conteúdo 1</div>
+            <div class="slide">Conteúdo 2</div>
+            <div class="slide">Conteúdo 3</div>
+        </div>
+        <button class="arrow arrow-right">&#10095;</button>
+    </section>
+    <aside>Relacionado</aside>
+    <main>Principal do site</main>
+    <footer>Rodapé</footer>
+
+    <script>
+        // Menu
+        openMenu.addEventListener('click', ()=> {
+            Menu.style.display = 'flex'
+            Menu.style.right = (Menu.offsetWidth * -1) + 'px'
+
+            openMenu.style.display = 'none'
+
+            setTimeout(() => {
+                Menu.style.opacity = '1'
+                Menu.style.right = '0'
+            },10)
+
+        })
+        closeMenu.addEventListener('click', ()=>{
+            Menu.removeAttribute('style')
+            openMenu.removeAttribute('style')
+            Menu.style.right = (Menu.offsetWidth * -1) + 'px'
+            setTimeout(() => {
+                Menu.style.opacity = '0'
+            },200)
+
+        });
+
+        // Slideshow
+        const slides = document.querySelectorAll('.slide');
+        const slideContainer = document.querySelector('.slide-container');
+        const nextButton = document.querySelector('.arrow-right');
+        const prevButton = document.querySelector('.arrow-left');
+        let currentIndex = 0;
+
+        const showSlide = (index) => {
+            slideContainer.style.transform = `translateX(-${index * 100}%)`;
+        };
+
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        const prevSlide = () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        };
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        setInterval(nextSlide, 7000); // intervalo de 7 segundos
+    </script>
+</body>
+</html>
