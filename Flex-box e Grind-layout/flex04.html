@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box 3</title>
+</head>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: lightslategray;
+        }
+        .container-pai{
+            background-color: black;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: rgb(3, 158, 158);
+            height: 200px;
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .container-itens{
+            background-color: azure;
+        }
+    </style>
+<body>
+   <main class="container-pai">
+    <section class="container">
+        <div class="container-itens">1</div>
+        <div class="container-itens">2</div>
+        <div class="container-itens">3</div>
+        <div class="container-itens">4</div>
+        <div class="container-itens">5</div>
+        <div class="container-itens">6</div>
+   </section>
+   </main>
+</body>
+</html>
