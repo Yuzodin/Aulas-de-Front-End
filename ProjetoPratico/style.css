@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background: url('./a-vibrant-and-eye-catching-advertisement-featuring-KjQuyBwBSa-aT_fVLUHQkA-drqTJ4wzRe24hVzXjE7BCA.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    height: 700px;
+}
+header img{
+    height: 120px;
+}
+ul{
+    display: flex;
+    padding-top: 20px;
+}
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: larger;
+}
+h1{
+    color: #CF4265;
+    text-align: center;
+    background-color: black;
+}
+main{
+    padding-top: 50px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 280px 280px;
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+div{
+    height: 200px;
+    width: 200px;
+    background-color: #D0D0D8;
+}
